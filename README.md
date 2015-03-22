@@ -51,7 +51,6 @@ $
 $ python validate.py schemas/status-message.json blobs/status-message.valid.json
 Validation succeeded
 
-
 $ python validate.py schemas/status-message.json blobs/status-message.invalid.json
 Validation failed
 Traceback (most recent call last):
