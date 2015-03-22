@@ -1,0 +1,66 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+
+    "title": "Schema for Service Instance",
+    "type": "object",
+
+    "definitions": {
+        "query": {
+            "$ref": "file:query.json"
+        },
+        "content-binding": {
+            "$ref": "file:content-binding.json"
+        }
+    },
+
+    "additionalProperties": false,
+
+    "required": ["address", "type", "version", "protocol_binding", "message_bindings"],
+
+    "properties": {
+        "address": {
+            "type": "string",
+            "format": "uri"
+        },
+        "type": {
+            "enum" : ["DISCOVERY", "COLLECTION_MANAGEMENT", "INBOX", "POLL"]
+        },
+        "version": {
+            "type": "string"
+        },
+        "available": {
+            "type": "boolean"
+        },
+        "message_bindings": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+        },
+        "protocol_binding": {
+            "type": "string"
+        },
+        "supported_queries": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/query"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+        },
+        "content_bindings": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/content-binding"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+        },
+        "message": {
+            "type": "string"
+        }
+    }
+}
+

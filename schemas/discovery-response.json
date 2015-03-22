@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+
+    "title": "Schema for a Discovery Response",
+    "type": "object",
+
+
+    "allOf": [
+        {"$ref": "file:response.json"}
+    ],
+
+    "definitions": {
+        "service-instance": {
+            "$ref": "file:service-instance.json"
+        }
+    },
+
+    "required": ["id", "in_response_to"],
+
+    "properties": {
+        "services": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/service-instance"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+        }
+    }
+}
