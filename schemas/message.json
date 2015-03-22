@@ -1,0 +1,30 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+
+    "title": "Schema for a generic TAXII message",
+    "type": "object",
+
+    "definitions": {
+        "uuid": {
+            "type": "string",
+            "minLength": 36,
+            "maxLength": 36,
+            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+        }
+    },
+
+    "required": ["id"],
+
+    "properties": {
+        "id": {
+            "$ref": "#/definitions/uuid"
+        },
+        "signature": {
+            "type": "string"
+        },
+        "extended_headers": {
+            "type": "object"
+        }
+    }
+}
+

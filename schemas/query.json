@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+
+    "title": "Schema for Query",
+    "type": "object",
+
+    "additionalProperties": false,
+
+    "required": ["format_id", "value"],
+
+    "properties": {
+        "format_id": {
+            "type": "string"
+        },
+        "value": {
+            "type": "object"
+        }
+    }
+}
+
+

@@ -1,0 +1,25 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+
+    "title": "Schema for Content Binding",
+    "type": "object",
+
+    "additionalProperties": false,
+
+    "required": ["id"],
+
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "subtypes": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+        }
+    }
+}
+
