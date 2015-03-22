@@ -1,0 +1,20 @@
+{
+    "id": "4154de74-ca5c-4467-924f-d116995351bc",
+    "in_response_to": "e7a49798-62af-42d2-9ddf-31991fdf2268",
+
+    "signature": "custom-signature",
+    "extended_headers": {
+        "custom-header": "some-value"
+    },
+
+    "message": "Message with this status message",
+
+    "type": "NOT_FOUND",
+
+    "details": {
+        "ITEM" : {
+            "invalid-object-key": "invalid-object-value"
+        }
+    }
+}
+

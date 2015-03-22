@@ -1,0 +1,21 @@
+{
+    "id": "1081e7dd-c2cf-4e0e-b44d-5aa0998ad25e",
+    "in_response_to": "074dff4c-f690-4682-bbdd-b03fdec57f43",
+
+    "signature": "custom-signature",
+    "extended_headers": {
+        "custom-header": "some-value"
+    },
+
+    "message": "Message with this status message",
+
+    "type": "UNSUPPORTED_CONTENT_BINDING",
+
+    "details": {
+        "SUPPORTED_CONTENT_BINDINGS" : [
+            "content-binding-1",
+            "content-binding-2"
+        ]
+    }
+}
+

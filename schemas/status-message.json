@@ -1,0 +1,95 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+
+    "title": "Schema for a Status Message",
+    "type": "object",
+
+    "allOf": [
+        {"$ref": "file:response.json"}
+    ],
+
+    "definitions": {
+        "service-instance": {
+            "$ref": "file:service-instance.json"
+        }
+    },
+
+    "required": ["id", "in_response_to"],
+
+    "properties": {
+        "type": {
+            "enum": [
+                "ASYNCHRONOUS_POLL_ERROR", "BAD_MESSAGE", "DENIED",
+                "DESTINATION_COLLECTION_ERROR", "FAILURE", "INVALID_RESPONSE_PART",
+                "NETWORK_ERROR", "NOT_FOUND", "PENDING", "POLLING_UNSUPPORTED",
+                "RETRY", "SUCCESS", "UNAUTHORIZED", "UNSUPPORTED_MESSAGE_BINDING",
+                "UNSUPPORTED_CONTENT_BINDING", "UNSUPPORTED_PROTOCOL_BINDING", "UNSUPPORTED_QUERY_FORMAT"
+            ]
+        },
+        "message": {
+            "type" : "string"
+        },
+        "details": {
+            "type" : "object",
+            "additionalProperties": true,
+            "properties": {
+                "ACCEPTABLE_DESTINATIONS": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 0,
+                    "uniqueItems": true
+                },
+                "MAX_PART_NUMBER": {
+                    "type": "integer"
+                },
+                "ITEM": {
+                    "type": "string"
+                },
+                "ESTIMATED_WAIT": {
+                    "type": "integer"
+                },
+                "RESULT_ID": {
+                    "type": "string"
+                },
+                "WILL_PUSH": {
+                    "type": "boolean"
+                },
+                "SUPPORTED_MESSAGE_BINDINGS": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 0,
+                    "uniqueItems": true
+                },
+                "SUPPORTED_CONTENT_BINDINGS": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 0,
+                    "uniqueItems": true
+                },
+                "SUPPORTED_PROTOCOL_BINDINGS": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 0,
+                    "uniqueItems": true
+                },
+                "SUPPORTED_QUERY_FORMATS": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "minItems": 0,
+                    "uniqueItems": true
+                }
+            }
+        }
+    }
+}
+
