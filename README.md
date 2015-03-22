@@ -21,7 +21,7 @@ Usage: validate.py SCHEMA_PATH BLOB_PATH
 ```
 
 #### Examples:
-
+```bash
 $ python validate.py schemas/discovery-response.json blobs/discovery-response.valid.json
 Validation succeeded
 
