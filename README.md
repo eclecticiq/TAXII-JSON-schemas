@@ -7,13 +7,19 @@ TAXII json schemas (partial coverage of the data model) are in `schemas/`. JSON 
 
 #### Using `validate.py` script to run validations:
 
+
 - install [`jsonschema`](https://pypi.python.org/pypi/jsonschema) in virtualenv:
 
 ```
 pip install jsonschema
 ```
 
-- run `validate.py`
+- To validate all valid JSON blobs (useful to test schemas), run:
+```
+    $ ./run-all.sh
+```
+
+- To validate a particular schema/blob, run `validate.py` with arguments:
 
 ```bash
 $ python validate.py
