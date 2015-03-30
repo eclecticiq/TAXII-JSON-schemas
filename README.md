@@ -16,7 +16,7 @@ pip install jsonschema
 
 - To validate all valid JSON blobs (useful to test schemas), run:
 ```
-    $ ./run-all.sh
+$ ./run-all.sh
 ```
 
 - To validate a particular schema/blob, run `validate.py` with arguments:
