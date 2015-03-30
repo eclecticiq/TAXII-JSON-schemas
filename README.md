@@ -11,27 +11,29 @@ TAXII json schemas (partial coverage of the data model) are in `schemas/`. JSON 
 - install [`jsonschema`](https://pypi.python.org/pypi/jsonschema) in virtualenv:
 
 ```
-pip install jsonschema
+$ virtualenv venv
+$ source venv/bin/activate
+(venv) $ pip install jsonschema
 ```
 
 - To validate all valid JSON blobs (useful to test schemas), run:
 ```
-$ ./run-all.sh
+(venv) $ ./run-all.sh
 ```
 
 - To validate a particular schema/blob, run `validate.py` with arguments:
 
 ```bash
-$ python validate.py
+(venv) $ python validate.py
 Usage: validate.py SCHEMA_PATH BLOB_PATH
 ```
 
 #### Examples:
 ```bash
-$ python validate.py schemas/discovery-response.json blobs/discovery-response.valid.json
+(venv) $ python validate.py schemas/discovery-response.json blobs/discovery-response.valid.json
 Validation succeeded
 
-$ python validate.py schemas/discovery-response.json blobs/discovery-response.invalid.json
+(venv)$ python validate.py schemas/discovery-response.json blobs/discovery-response.invalid.json
 Validation failed
 Traceback (most recent call last):
   File "validate.py", line 32, in <module>
@@ -54,10 +56,10 @@ $
 ```
 
 ```bash
-$ python validate.py schemas/status-message.json blobs/status-message.valid.json
+(venv) $ python validate.py schemas/status-message.json blobs/status-message.valid.json
 Validation succeeded
 
-$ python validate.py schemas/status-message.json blobs/status-message.invalid.json
+(venv) $ python validate.py schemas/status-message.json blobs/status-message.invalid.json
 Validation failed
 Traceback (most recent call last):
   File "validate.py", line 32, in <module>
