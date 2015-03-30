@@ -1,0 +1,8 @@
+{
+    "message_id" : "a.com:7e5565ed-f75a-4af7-8afe-f8cd3b621b13",
+    "collection_name" : "default",
+    "action" : "SUBSCRIBE",
+    "subscription_parameters" : {
+        "response_type" : "FULL"
+    }
+}

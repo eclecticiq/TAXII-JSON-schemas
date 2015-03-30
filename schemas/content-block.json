@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+
+    "title": "Schema for a Content Block",
+    "type": "object",
+
+    "additionalProperties": false,
+
+    "required": ["content"],
+
+    "properties": {
+        "content": {
+            "type": "string"
+        },
+        "timestamp_label": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "message": {
+            "type": "string"
+        },
+        "padding": {
+            "type": "string"
+        },
+        "signature": {
+            "type": "string"
+        }
+    }
+}
+
+

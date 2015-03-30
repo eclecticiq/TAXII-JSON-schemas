@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema",
 
-    "title": "Schema for a Discovery Response",
+    "title": "Schema for a Collection Information Response",
     "type": "object",
 
     "allOf": [
@@ -9,21 +9,22 @@
     ],
 
     "definitions": {
-        "service-instance": {
-            "$ref": "file:service-instance.json"
+        "collection": {
+            "$ref": "file:collection.json"
         }
     },
 
     "required": ["message_id", "in_response_to"],
 
     "properties": {
-        "service_instances": {
+        "collections": {
             "type": "array",
             "items": {
-                "$ref": "#/definitions/service-instance"
+                "$ref": "#/definitions/collection"
             },
             "minItems": 0,
             "uniqueItems": true
         }
     }
 }
+

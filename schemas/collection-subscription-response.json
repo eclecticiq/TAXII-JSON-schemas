@@ -1,0 +1,37 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+
+    "title": "Schema for a Collection Subscription Response",
+    "type": "object",
+
+    "allOf": [
+        {"$ref": "file:response.json"}
+    ],
+
+    "definitions": {
+        "subscription": {
+            "$ref": "file:subscription.json"
+        }
+    },
+
+    "required": ["message_id", "in_response_to", "collection_name"],
+
+    "properties": {
+        "collection_name": {
+            "type": "string"
+        },
+        "message": {
+            "type": "string"
+        },
+        "subscriptions": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/subscription"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+        }
+    }
+}
+
+

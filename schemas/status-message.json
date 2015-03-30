@@ -14,22 +14,24 @@
         }
     },
 
-    "required": ["id", "in_response_to"],
+    "required": ["message_id", "in_response_to"],
 
     "properties": {
-        "type": {
+        "status_type": {
             "enum": [
                 "ASYNCHRONOUS_POLL_ERROR", "BAD_MESSAGE", "DENIED",
                 "DESTINATION_COLLECTION_ERROR", "FAILURE", "INVALID_RESPONSE_PART",
                 "NETWORK_ERROR", "NOT_FOUND", "PENDING", "POLLING_UNSUPPORTED",
-                "RETRY", "SUCCESS", "UNAUTHORIZED", "UNSUPPORTED_MESSAGE_BINDING",
-                "UNSUPPORTED_CONTENT_BINDING", "UNSUPPORTED_PROTOCOL_BINDING", "UNSUPPORTED_QUERY_FORMAT"
+                "RETRY", "SUCCESS", "UNAUTHORIZED",
+
+                "UNSUPPORTED_MESSAGE", "UNSUPPORTED_CONTENT", "UNSUPPORTED_PROTOCOL",
+                "UNSUPPORTED_QUERY"
             ]
         },
         "message": {
             "type" : "string"
         },
-        "details": {
+        "status_details": {
             "type" : "object",
             "additionalProperties": true,
             "properties": {
@@ -56,7 +58,7 @@
                 "WILL_PUSH": {
                     "type": "boolean"
                 },
-                "SUPPORTED_MESSAGE_BINDINGS": {
+                "SUPPORTED_BINDING": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -64,7 +66,7 @@
                     "minItems": 0,
                     "uniqueItems": true
                 },
-                "SUPPORTED_CONTENT_BINDINGS": {
+                "SUPPORTED_CONTENT": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -72,7 +74,7 @@
                     "minItems": 0,
                     "uniqueItems": true
                 },
-                "SUPPORTED_PROTOCOL_BINDINGS": {
+                "SUPPORTED_PROTOCOL": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -80,7 +82,7 @@
                     "minItems": 0,
                     "uniqueItems": true
                 },
-                "SUPPORTED_QUERY_FORMATS": {
+                "SUPPORTED_QUERY": {
                     "type": "array",
                     "items": {
                         "type": "string"

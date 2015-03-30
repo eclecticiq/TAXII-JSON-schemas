@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+
+    "title": "Schema for a Service Instance Basics",
+    "type": "object",
+
+    "allOf": [
+        {"$ref": "file:service-basics.json"}
+    ],
+
+    "required": ["address", "protocol_binding", "message_bindings"],
+
+    "properties": {
+        "address": {
+            "type": "string",
+            "format": "uri"
+        }
+    }
+}
+
+
+

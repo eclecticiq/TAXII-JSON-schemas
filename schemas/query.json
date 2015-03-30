@@ -1,19 +1,19 @@
 {
     "$schema": "http://json-schema.org/schema#",
 
-    "title": "Schema for Query",
+    "title": "Schema for a Query",
     "type": "object",
 
     "additionalProperties": false,
 
-    "required": ["format_id", "value"],
+    "required": ["format_id", "query_format"],
 
     "properties": {
         "format_id": {
             "type": "string"
         },
-        "value": {
-            "type": "object"
+        "query_format": {
+            "type": "string"
         }
     }
 }

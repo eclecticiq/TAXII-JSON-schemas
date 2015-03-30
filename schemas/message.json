@@ -10,14 +10,17 @@
             "minLength": 36,
             "maxLength": 36,
             "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
+        },
+        "taxii_id": {
+            "type": "string"
         }
     },
 
-    "required": ["id"],
+    "required": ["message_id"],
 
     "properties": {
-        "id": {
-            "$ref": "#/definitions/uuid"
+        "message_id": {
+            "$ref": "#/definitions/taxii_id"
         },
         "signature": {
             "type": "string"

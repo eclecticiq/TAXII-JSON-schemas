@@ -1,0 +1,56 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+
+    "title": "Schema for a Poll Request",
+    "type": "object",
+
+    "allOf": [
+        {"$ref": "file:message.json"}
+    ],
+
+    "definitions": {
+        "service-instance-basics": {
+            "$ref": "file:service-instance-basics.json"
+        }
+    },
+
+    "required": ["message_id", "collection_name"],
+
+    "properties": {
+        "collection_name": {
+            "type": "string"
+        },
+        "exclusive_begin_timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "inclusive_end_timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "subscription_id": {
+            "type": "string"
+        },
+        "poll_parameters": {
+            "type": "object",
+            "required": ["response_type"],
+            "properties": {
+                "allow_asynch": {
+                    "type": "boolean"
+                },
+                "response_type": {
+                    "enum": ["FULL", "COUNT_ONLY"]
+                },
+                "query": {
+                    "type": "string"
+                },
+                "query_format_id": {
+                    "type": "string"
+                },
+                "delivery_parameters": {
+                    "$ref": "#/definitions/service-instance-basics"
+                }
+            }
+        }
+    }
+}

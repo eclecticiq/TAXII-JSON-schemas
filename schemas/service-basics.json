@@ -1,25 +1,24 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema",
 
-    "title": "Schema for a Content Binding",
+    "title": "Schema for a Service Basics",
     "type": "object",
 
-    "additionalProperties": false,
-
-    "required": ["id"],
+    "required": ["protocol_binding", "message_bindings"],
 
     "properties": {
-        "id": {
+        "protocol_binding": {
             "type": "string"
         },
-        "subtypes": {
+        "message_bindings": {
             "type": "array",
             "items": {
                 "type": "string"
             },
-            "minItems": 0,
+            "minItems": 1,
             "uniqueItems": true
         }
     }
 }
+
 

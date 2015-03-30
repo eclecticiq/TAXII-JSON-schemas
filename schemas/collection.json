@@ -1,0 +1,75 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+
+    "title": "Schema for a Collection",
+    "type": "object",
+
+    "definitions": {
+        "query": {
+            "$ref": "file:query.json"
+        },
+        "content-binding": {
+            "$ref": "file:content-binding.json"
+        },
+        "service-basics": {
+            "$ref": "file:service-basics.json"
+        },
+        "service-instance-basics": {
+            "$ref": "file:service-instance-basics.json"
+        }
+    },
+
+    "required": ["collection_name", "description"],
+
+    "properties": {
+        "collection_name": {
+            "type": "string"
+        },
+        "collection_type": {
+            "enum": ["DATA_FEED", "DATA_SET"]
+        },
+        "available": {
+            "type": "boolean"
+        },
+        "description": {
+            "type": "string"
+        },
+        "collection_volume": {
+            "type": "string"
+        },
+        "push_methods": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/service-basics"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+        },
+        "polling_services": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/service-instance-basics"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+        },
+        "subscription_services": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/service-instance-basics"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+        },
+        "receiving_inbox_services": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/service-instance-basics"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+        }
+    }
+}
+
+

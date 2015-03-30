@@ -1,0 +1,51 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+
+    "title": "Schema for a Subscription",
+    "type": "object",
+
+    "definitions": {
+        "service-instance-basics": {
+            "$ref": "file:service-instance-basics.json"
+        }
+    },
+
+    "required": ["subscription_id"],
+
+    "properties": {
+        "status": {
+            "enum": ["ACTIVE", "PAUSED", "UNSUBSCRIBED"]
+        },
+        "subscription_id": {
+            "type": "string"
+        },
+        "subscription_parameters": {
+            "type": "object",
+            "properties": {
+                "response_type": {
+                    "enum": ["FULL", "COUNT_ONLY"]
+                },
+                "query": {
+                    "type": "string"
+                },
+                "query_format_id": {
+                    "type": "string"
+                }
+            }
+        },
+        "push_parameters": {
+            "$ref": "#/definitions/service-instance-basics"
+        },
+        "poll_instances": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/service-instance-basics"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+        }
+    }
+}
+
+
+

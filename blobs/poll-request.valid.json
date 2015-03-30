@@ -1,0 +1,10 @@
+{
+    "message_id" : "a.com:a7587fdb-954d-4fb8-9dd7-87da04527d5d",
+    "collection_name" : "default",
+    "exclusive_begin_timestamp" : "2014-12-19T00:00:00-07:00",
+    "inclusive_end_timestamp" : "2014-12-19T12:00:00-07:00",
+    "poll_parameters" : {
+        "allow_asynch" : false,
+        "response_type" : "FULL"
+    }
+}

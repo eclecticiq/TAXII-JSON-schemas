@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+
+    "title": "Schema for a Collection Information Request",
+    "type": "object",
+
+    "allOf": [
+        {"$ref": "file:message.json"}
+    ],
+
+    "required": ["message_id"]
+}
+
+

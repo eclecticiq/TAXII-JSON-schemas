@@ -1,0 +1,51 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+
+    "title": "Schema for a Collection Subscription Request",
+    "type": "object",
+
+    "allOf": [
+        {"$ref": "file:message.json"}
+    ],
+
+    "definitions": {
+        "service-instance-basics": {
+            "$ref": "file:service-instance-basics.json"
+        }
+    },
+
+    "required": ["message_id", "action", "collection_name"],
+
+    "properties": {
+        "action": {
+            "enum": ["SUBSCRIBE", "UNSUBSCRIBE", "PAUSE", "RESUME", "STATUS"]
+        },
+        "collection_name": {
+            "type": "string"
+        },
+        "subscription_id": {
+            "type": "string"
+        },
+        "subscription_parameters": {
+            "type": "object",
+            "required": ["response_type"],
+            "properties": {
+                "response_type": {
+                    "enum": ["FULL", "COUNT_ONLY"]
+                },
+                "query": {
+                    "type": "string"
+                },
+                "query_format_id": {
+                    "type": "string"
+                },
+                "push_parameters": {
+                    "$ref": "#/definitions/service-instance-basics"
+                }
+            }
+        }
+    }
+}
+
+
+

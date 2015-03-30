@@ -1,5 +1,4 @@
 {
-    "id": "./response.json",
     "$schema": "http://json-schema.org/draft-04/schema",
 
     "title": "Schema for a generic TAXII response message",
@@ -9,11 +8,11 @@
         {"$ref": "file:message.json"}
     ],
 
-    "required": ["id", "in_response_to"],
+    "required": ["message_id", "in_response_to"],
 
     "properties": {
         "in_response_to": {
-            "$ref": "file:message.json#/definitions/uuid"
+            "$ref": "file:message.json#/definitions/taxii_id"
         }
     }
 }

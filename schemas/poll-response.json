@@ -1,0 +1,64 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+
+    "title": "Schema for a Pol Response",
+    "type": "object",
+
+    "allOf": [
+        {"$ref": "file:response.json"}
+    ],
+
+    "definitions": {
+        "content-block": {
+            "$ref": "file:content-block.json"
+        }
+    },
+
+    "required": ["message_id", "in_response_to", "collection_name"],
+
+    "properties": {
+        "collection_name": {
+            "type": "string"
+        },
+        "more": {
+            "type": "boolean"
+        },
+        "result_id": {
+            "type": "string"
+        },
+        "result_part_number": {
+            "type": "string"
+        },
+        "subscription_id": {
+            "type": "string"
+        },
+        "exclusive_begin_timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "inclusive_end_timestamp": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "record_count": {
+            "type": "string"
+        },
+        "partial_count": {
+            "type": "boolean"
+        },
+        "message": {
+            "type": "string"
+        },
+        "content_block": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/content-block"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+        }
+    }
+}
+
+
+
