@@ -1,0 +1,71 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema",
+
+    "title": "Schema for an Inbox Message",
+    "type": "object",
+
+    "allOf": [
+        {"$ref": "file:message.json"}
+    ],
+
+    "definitions": {
+        "content-block": {
+            "$ref": "file:content-block.json"
+        }
+    },
+
+    "required": ["message_id"],
+
+    "properties": {
+        "result_id": {
+            "type": "string"
+        },
+        "destination_collection_name": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+        },
+        "message": {
+            "type": "string"
+        },
+        "source_subscription": {
+            "type": "object",
+            "required": ["collection_name", "subscription_id"],
+
+            "properties": {
+                "collection_name": {
+                    "type": "string"
+                },
+                "subscription_id": {
+                    "type": "string"
+                },
+                "exclusive_begin_timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "inclusive_end_timestamp": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+        "record_count": {
+            "$ref": "message.json#/definitions/positiveInteger"
+        },
+        "partial_count": {
+            "type": "boolean"
+        },
+        "content_blocks": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/content-block"
+            },
+            "minItems": 0,
+            "uniqueItems": true
+        }
+    }
+}
+

@@ -4,15 +4,8 @@
     "title": "Schema for a Query",
     "type": "object",
 
-    "additionalProperties": false,
-
-    "required": ["format_id", "query_format"],
-
-    "properties": {
-        "format_id": {
-            "type": "string"
-        },
-        "query_format": {
+    "patternProperties": {
+        ".*": {
             "type": "string"
         }
     }

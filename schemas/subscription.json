@@ -5,6 +5,9 @@
     "type": "object",
 
     "definitions": {
+        "query": {
+            "$ref": "file:query.json"
+        },
         "service-instance-basics": {
             "$ref": "file:service-instance-basics.json"
         }
@@ -13,11 +16,11 @@
     "required": ["subscription_id"],
 
     "properties": {
-        "status": {
-            "enum": ["ACTIVE", "PAUSED", "UNSUBSCRIBED"]
-        },
         "subscription_id": {
             "type": "string"
+        },
+        "status": {
+            "enum": ["ACTIVE", "PAUSED", "UNSUBSCRIBED"]
         },
         "subscription_parameters": {
             "type": "object",
@@ -26,10 +29,7 @@
                     "enum": ["FULL", "COUNT_ONLY"]
                 },
                 "query": {
-                    "type": "string"
-                },
-                "query_format_id": {
-                    "type": "string"
+                    "$ref": "#/definitions/query"
                 }
             }
         },

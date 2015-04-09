@@ -9,6 +9,9 @@
     ],
 
     "definitions": {
+        "query": {
+            "$ref": "file:query.json"
+        },
         "service-instance-basics": {
             "$ref": "file:service-instance-basics.json"
         }
@@ -42,10 +45,7 @@
                     "enum": ["FULL", "COUNT_ONLY"]
                 },
                 "query": {
-                    "type": "string"
-                },
-                "query_format_id": {
-                    "type": "string"
+                    "$ref": "#/definitions/query"
                 },
                 "delivery_parameters": {
                     "$ref": "#/definitions/service-instance-basics"

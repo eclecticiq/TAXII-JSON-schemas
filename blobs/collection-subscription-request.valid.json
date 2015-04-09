@@ -3,6 +3,10 @@
     "collection_name" : "default",
     "action" : "SUBSCRIBE",
     "subscription_parameters" : {
-        "response_type" : "FULL"
+        "response_type" : "FULL",
+        "query" : {
+            "format-A" : "SELECT * FROM B",
+            "format-B" : "SELECT * FROM C"
+        }
     }
 }

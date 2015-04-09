@@ -14,7 +14,7 @@
         }
     },
 
-    "required": ["message_id", "in_response_to"],
+    "required": ["message_id", "in_response_to", "status_type"],
 
     "properties": {
         "status_type": {
@@ -44,13 +44,13 @@
                     "uniqueItems": true
                 },
                 "MAX_PART_NUMBER": {
-                    "type": "integer"
+                    "type": "string"
                 },
                 "ITEM": {
                     "type": "string"
                 },
                 "ESTIMATED_WAIT": {
-                    "type": "integer"
+                    "type": "string"
                 },
                 "RESULT_ID": {
                     "type": "string"
@@ -58,7 +58,7 @@
                 "WILL_PUSH": {
                     "type": "boolean"
                 },
-                "SUPPORTED_BINDING": {
+                "SUPPORTED_BINDINGS": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -66,7 +66,7 @@
                     "minItems": 0,
                     "uniqueItems": true
                 },
-                "SUPPORTED_CONTENT": {
+                "SUPPORTED_CONTENTS": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -74,7 +74,7 @@
                     "minItems": 0,
                     "uniqueItems": true
                 },
-                "SUPPORTED_PROTOCOL": {
+                "SUPPORTED_PROTOCOLS": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -82,7 +82,7 @@
                     "minItems": 0,
                     "uniqueItems": true
                 },
-                "SUPPORTED_QUERY": {
+                "SUPPORTED_QUERIES": {
                     "type": "array",
                     "items": {
                         "type": "string"

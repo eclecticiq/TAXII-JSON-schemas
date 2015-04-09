@@ -4,12 +4,10 @@
     "service_instances": [
         {
             "available": true,
-            "supported_queries": [
-                {
-                    "format_id": "query-format",
-                    "query_format": "some-query-format"
-                }
-            ],
+            "supported_queries": {
+                "query-format-id-A" : ["some-query-format"],
+                "query-format-id-B" : ["query-format-1", "query-format-2"]
+            },
             "message_bindings": [
                 "urn:taxii.mitre.org:message:json:1.1"
             ],

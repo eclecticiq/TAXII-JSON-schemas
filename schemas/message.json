@@ -13,6 +13,15 @@
         },
         "taxii_id": {
             "type": "string"
+        },
+        "positiveInteger": {
+            "type": "integer",
+            "minimum": 0
+        },
+        "positiveNonZeroInteger": {
+            "type": "integer",
+            "minimum": 0,
+            "exclusiveMinimum": true
         }
     },
 

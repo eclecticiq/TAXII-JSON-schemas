@@ -23,7 +23,12 @@
             "type": "string"
         },
         "signature": {
-            "type": "string"
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "minItems": 0,
+            "uniqueItems": true
         }
     }
 }

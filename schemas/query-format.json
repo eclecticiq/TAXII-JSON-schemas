@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+
+    "title": "Schema for a Query Format",
+    "type": "object",
+
+    "patternProperties": {
+        ".*": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+        }
+    }
+}
+
+

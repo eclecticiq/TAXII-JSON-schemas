@@ -3,9 +3,9 @@
     "in_response_to" : "a.com:2338c4ec-b686-4591-8511-50c5785574d8",
     "collection_name" : "default",
     "more" : false,
-    "result_part_number" : "1",
+    "result_part_number" : 1,
     "inclusive_end_timestamp" : "2014-12-19T12:00:00-07:00",
-    "record_count" : "1",
+    "record_count" : 1,
     "partial_count" : false,
     "content_block" : [
         {

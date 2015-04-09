@@ -30,9 +30,9 @@ if __name__ == '__main__':
 
     try:
         validate(blob, schema, resolver=resolver)
-        print "Validation succeeded"
+        print "SUCCESS"
     except:
-        print "Validation failed"
+        print "FAILURE"
         raise
 
 

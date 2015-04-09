@@ -16,7 +16,7 @@
             "content-binding-1",
             "content-binding-2"
         ],
-        "ESTIMATED_WAIT": 10,
+        "ESTIMATED_WAIT": "10",
         "RESULT_ID" : "some unique ID value",
         "WILL_PUSH": false
     }

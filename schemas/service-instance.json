@@ -5,8 +5,8 @@
     "type": "object",
 
     "definitions": {
-        "query": {
-            "$ref": "file:query.json"
+        "query-format": {
+            "$ref": "file:query-format.json"
         },
         "content-binding": {
             "$ref": "file:content-binding.json"
@@ -29,6 +29,9 @@
         "service_version": {
             "type": "string"
         },
+        "protocol_binding": {
+            "type": "string"
+        },
         "message_bindings": {
             "type": "array",
             "items": {
@@ -37,16 +40,8 @@
             "minItems": 1,
             "uniqueItems": true
         },
-        "protocol_binding": {
-            "type": "string"
-        },
         "supported_queries": {
-            "type": "array",
-            "items": {
-                "$ref": "#/definitions/query"
-            },
-            "minItems": 0,
-            "uniqueItems": true
+            "$ref": "#/definitions/query-format"
         },
         "message": {
             "type": "string"
