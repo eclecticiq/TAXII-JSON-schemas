@@ -18,7 +18,7 @@ $ source venv/bin/activate
 
 - To validate all valid JSON blobs (useful to test schemas), run:
 ```
-(venv) $ ./run-all.sh
+(venv) $ ./validate-all.sh
 ```
 
 - To validate a particular schema/blob, run `validate.py` with arguments:
@@ -31,10 +31,10 @@ Usage: validate.py SCHEMA_PATH BLOB_PATH
 #### Examples:
 ```bash
 (venv) $ python validate.py schemas/discovery-response.json blobs/discovery-response.valid.json
-Validation succeeded
+SUCCESS
 
 (venv)$ python validate.py schemas/discovery-response.json blobs/discovery-response.invalid.json
-Validation failed
+FAILURE
 Traceback (most recent call last):
   File "validate.py", line 32, in <module>
     validate(blob, schema, resolver=resolver)
@@ -57,10 +57,10 @@ $
 
 ```bash
 (venv) $ python validate.py schemas/status-message.json blobs/status-message.valid.json
-Validation succeeded
+SUCCESS
 
 (venv) $ python validate.py schemas/status-message.json blobs/status-message.invalid.json
-Validation failed
+FAILURE
 Traceback (most recent call last):
   File "validate.py", line 32, in <module>
     validate(blob, schema, resolver=resolver)
