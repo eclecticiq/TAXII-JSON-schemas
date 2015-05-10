@@ -8,7 +8,7 @@
         {"$ref": "file:service-basics.json"}
     ],
 
-    "required": ["address", "protocol_binding", "message_bindings"],
+    "required": ["address", "protocol", "encodings"],
 
     "properties": {
         "address": {

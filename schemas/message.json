@@ -5,14 +5,12 @@
     "type": "object",
 
     "definitions": {
-        "uuid": {
-            "type": "string",
-            "minLength": 36,
-            "maxLength": 36,
-            "pattern": "^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$"
-        },
-        "taxii_id": {
+        "message_id": {
             "type": "string"
+        },
+        "positiveNumber": {
+            "type": "number",
+            "minimum": 0
         },
         "positiveInteger": {
             "type": "integer",
@@ -25,14 +23,11 @@
         }
     },
 
-    "required": ["message_id"],
+    "required": ["id"],
 
     "properties": {
-        "message_id": {
-            "$ref": "#/definitions/taxii_id"
-        },
-        "signature": {
-            "type": "string"
+        "id": {
+            "$ref": "#/definitions/message_id"
         },
         "extended_headers": {
             "type": "object"

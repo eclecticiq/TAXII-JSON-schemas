@@ -1,25 +1,24 @@
 {
-    "message_id": "some.com:2e79265e-e653-4a2a-afab-403e3c822e87",
+    "id": "some.com:2e79265e-e653-4a2a-afab-403e3c822e87",
     "in_response_to": "other.org:5a780305-3aa4-4418-87c7-2ac486a2db38",
     "service_instances": [
         {
+            "service_type": "DISCOVERY",
             "available": true,
             "supported_queries": {
                 "query-format-id-A" : ["some-query-format"],
                 "query-format-id-B" : ["query-format-1", "query-format-2"]
             },
-            "message_bindings": [
+            "encodings": [
                 "urn:taxii.mitre.org:message:json:1.1"
             ],
-            "protocol_binding": "urn:taxii.mitre.org:protocol:http:1.0",
-            "service_version": "urn:taxii.mitre.org:services:1.1",
+            "protocol": "urn:taxii.mitre.org:protocol:http:1.0",
+            "version": "urn:taxii.mitre.org:services:1.1",
             "address": "http://example.com/path",
-            "message": "discovery service message",
-            "service_type": "DISCOVERY"
+            "message": "discovery service message"
         }
     ],
     "extended_headers": {
         "custom_header": "header value"
-    },
-    "signature": "signature value"
+    }
 }

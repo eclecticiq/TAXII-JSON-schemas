@@ -14,7 +14,7 @@
         }
     },
 
-    "required": ["message_id", "in_response_to"],
+    "required": ["id", "in_response_to"],
 
     "properties": {
         "collections": {

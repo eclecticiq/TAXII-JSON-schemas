@@ -4,13 +4,13 @@
     "title": "Schema for a Service Basics",
     "type": "object",
 
-    "required": ["protocol_binding", "message_bindings"],
+    "required": ["protocol", "encodings"],
 
     "properties": {
-        "protocol_binding": {
+        "protocol": {
             "type": "string"
         },
-        "message_bindings": {
+        "encodings": {
             "type": "array",
             "items": {
                 "type": "string"

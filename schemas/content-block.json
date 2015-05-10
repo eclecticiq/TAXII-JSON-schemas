@@ -21,14 +21,6 @@
         },
         "padding": {
             "type": "string"
-        },
-        "signature": {
-            "type": "array",
-            "items": {
-                "type": "string"
-            },
-            "minItems": 0,
-            "uniqueItems": true
         }
     }
 }

@@ -17,7 +17,7 @@
         }
     },
 
-    "required": ["message_id", "action", "collection_name"],
+    "required": ["id", "action", "collection_name"],
 
     "properties": {
         "action": {
@@ -38,11 +38,16 @@
                 },
                 "query": {
                     "$ref": "#/definitions/query"
-                },
-                "push_parameters": {
-                    "$ref": "#/definitions/service-instance-basics"
                 }
             }
+        },
+        "push_parameters": {
+            "type": "array",
+            "items": {
+                "$ref": "#/definitions/service-instance-basics"
+            },
+            "minItems": 1,
+            "maxItems": 1
         }
     }
 }

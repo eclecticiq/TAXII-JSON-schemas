@@ -1,35 +1,26 @@
 {
-  "services": [
-    {
-      "available": true,
-      "supported_queries": [
+    "id": "2e79265e-e653-4a2a-afab-403e3c822e87",
+    "in_response_to": "5a780305-3aa4-4418-87c7-2ac486a2db38",
+    "services": [
         {
-          "format_id": "query-format",
-          "value": {
-            "a": 1
-          }
+            "type": "INVALID-TYPE",
+            "available": true,
+            "supported_queries": [
+                {
+                    "format_id": "query-format",
+                    "value": {
+                        "a": 1
+                    }
+                }
+            ],
+            "encodings": {"a" : "b"},
+            "protocol": "protocol-binding-1",
+            "version": "random-string",
+            "address": "http://example.com/path",
+            "message": "discovery service message"
         }
-      ],
-      "message_bindings": {"a" : "b"},
-      "content_bindings": [
-        {
-          "subtypes": [
-            "binding-subtype1, binding-subtype2"
-          ],
-          "id": "custom-bindings"
-        }
-      ],
-      "protocol_binding": "protocol-binding-1",
-      "version": "random-string",
-      "address": "http://example.com/path",
-      "message": "discovery service message",
-      "type": "CUSTOM-DISCOVERY"
+    ],
+    "extended_headers": {
+        "custom_header": "header value"
     }
-  ],
-  "extended_headers": {
-    "custom_header": "header value"
-  },
-  "signature": "signature value",
-  "id": "2e79265e-e653-4a2a-afab-403e3c822e87",
-  "in_response_to": "5a780305-3aa4-4418-87c7-2ac486a2db38"
 }

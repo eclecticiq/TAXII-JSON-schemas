@@ -1,17 +1,17 @@
 {
-    "message_id" : "x.com:6952c1a3-0ed1-47e0-ae86-edf4781a1618",
+    "id" : "x.com:6952c1a3-0ed1-47e0-ae86-edf4781a1618",
     "in_response_to" : "y.com:7f5dacef-79da-4540-9b4d-1de242127b7a",
     "collections" : [
         {
-            "collection_name" : "default",
-            "collection_type" : "DATA_FEED",
+            "name" : "default",
+            "type" : "DATA_FEED",
             "available" : true,
             "description" : "Data feed of interesting indicators",
-            "collected_volume" : "some value",
+            "volume" : 123,
             "push_methods" : [
                 {
-                    "protocol_binding" : "urn:taxii.mitre.org:protocol:http:1.0",
-                    "message_bindings" : [
+                    "protocol" : "urn:taxii.mitre.org:protocol:http:1.0",
+                    "encodings" : [
                         "urn:taxii.mitre.org:message:json:1.1"
                     ]
                 }
@@ -19,8 +19,8 @@
             "polling_services" : [
                 {
                     "address" : "http://example.com/services/poll/",
-                    "protocol_binding" : "urn:taxii.mitre.org:protocol:http:1.0",
-                    "message_bindings" : [
+                    "protocol" : "urn:taxii.mitre.org:protocol:http:1.0",
+                    "encodings" : [
                         "urn:taxii.mitre.org:message:json:1.1"
                     ]
                 }
@@ -28,17 +28,17 @@
             "subscription_services" : [
                 {
                     "address" : "http://example.com/services/collection-management/",
-                    "protocol_binding" : "urn:taxii.mitre.org:protocol:http:1.0",
-                    "message_bindings" : [
+                    "protocol" : "urn:taxii.mitre.org:protocol:http:1.0",
+                    "encodings" : [
                         "urn:taxii.mitre.org:message:json:1.1"
                     ]
                 }
             ],
-            "receiving_inbox_services" : [
+            "inbox_services" : [
                 {
                     "address" : "http://example.com/services/inbox/",
-                    "protocol_binding" : "urn:taxii.mitre.org:protocol:http:1.0",
-                    "message_bindings" : [
+                    "protocol" : "urn:taxii.mitre.org:protocol:http:1.0",
+                    "encodings" : [
                         "urn:taxii.mitre.org:message:json:1.1"
                     ]
                 }

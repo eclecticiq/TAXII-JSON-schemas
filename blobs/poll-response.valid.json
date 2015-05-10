@@ -1,5 +1,5 @@
 {
-    "message_id" : "b.com:f4fa456e-86ba-4c94-8e18-b79f44d3b1e0",
+    "id" : "b.com:f4fa456e-86ba-4c94-8e18-b79f44d3b1e0",
     "in_response_to" : "a.com:2338c4ec-b686-4591-8511-50c5785574d8",
     "collection_name" : "default",
     "more" : false,
@@ -9,7 +9,7 @@
     "partial_count" : false,
     "content_block" : [
         {
-            "content" : "Some STIX data blob"
+            "content" : "STIX data blob"
         }
     ]
 }

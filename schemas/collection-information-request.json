@@ -8,7 +8,7 @@
         {"$ref": "file:message.json"}
     ],
 
-    "required": ["message_id"]
+    "required": ["id"]
 }
 
 

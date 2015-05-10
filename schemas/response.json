@@ -8,11 +8,11 @@
         {"$ref": "file:message.json"}
     ],
 
-    "required": ["message_id", "in_response_to"],
+    "required": ["id", "in_response_to"],
 
     "properties": {
         "in_response_to": {
-            "$ref": "file:message.json#/definitions/taxii_id"
+            "$ref": "file:message.json#/definitions/message_id"
         }
     }
 }

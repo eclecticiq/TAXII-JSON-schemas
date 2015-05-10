@@ -19,13 +19,13 @@
         }
     },
 
-    "required": ["collection_name", "description"],
+    "required": ["name", "description"],
 
     "properties": {
-        "collection_name": {
+        "name": {
             "type": "string"
         },
-        "collection_type": {
+        "type": {
             "enum": ["DATA_FEED", "DATA_SET"]
         },
         "available": {
@@ -34,9 +34,8 @@
         "description": {
             "type": "string"
         },
-        "collection_volume": {
-            "type": "integer",
-            "minimum": 0
+        "volume": {
+            "$ref": "message.json#/definitions/positiveInteger"
         },
         "push_methods": {
             "type": "array",
@@ -62,7 +61,7 @@
             "minItems": 0,
             "uniqueItems": true
         },
-        "receiving_inbox_services": {
+        "inbox_services": {
             "type": "array",
             "items": {
                 "$ref": "#/definitions/service-instance-basics"

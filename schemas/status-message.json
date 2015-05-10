@@ -14,10 +14,10 @@
         }
     },
 
-    "required": ["message_id", "in_response_to", "status_type"],
+    "required": ["id", "in_response_to", "type"],
 
     "properties": {
-        "status_type": {
+        "type": {
             "enum": [
                 "ASYNCHRONOUS_POLL_ERROR", "BAD_MESSAGE", "DENIED",
                 "DESTINATION_COLLECTION_ERROR", "FAILURE", "INVALID_RESPONSE_PART",
@@ -28,10 +28,7 @@
                 "UNSUPPORTED_QUERY"
             ]
         },
-        "message": {
-            "type" : "string"
-        },
-        "status_details": {
+        "details": {
             "type" : "object",
             "additionalProperties": true,
             "properties": {
@@ -44,13 +41,13 @@
                     "uniqueItems": true
                 },
                 "MAX_PART_NUMBER": {
-                    "type": "string"
+                    "$ref": "file:message.json#/definitions/positiveInteger"
                 },
                 "ITEM": {
                     "type": "string"
                 },
                 "ESTIMATED_WAIT": {
-                    "type": "string"
+                    "$ref": "file:message.json#/definitions/positiveNumber"
                 },
                 "RESULT_ID": {
                     "type": "string"
@@ -91,6 +88,9 @@
                     "uniqueItems": true
                 }
             }
+        },
+        "message": {
+            "type" : "string"
         }
     }
 }

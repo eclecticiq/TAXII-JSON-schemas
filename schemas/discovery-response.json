@@ -14,10 +14,10 @@
         }
     },
 
-    "required": ["message_id", "in_response_to"],
+    "required": ["id", "in_response_to"],
 
     "properties": {
-        "service_instances": {
+        "services": {
             "type": "array",
             "items": {
                 "$ref": "#/definitions/service-instance"

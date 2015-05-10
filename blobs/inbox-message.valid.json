@@ -1,8 +1,8 @@
 {
-    "message_id" : "a.com:f5d58b62-e03a-47dc-b78d-517a12218475",
+    "id" : "a.com:f5d58b62-e03a-47dc-b78d-517a12218475",
     "content_block" : [
         {
-            "content" : "Some STIX data blob"
+            "content" : "STIX data blob"
         }
     ]
 }

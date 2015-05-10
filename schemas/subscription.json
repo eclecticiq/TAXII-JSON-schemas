@@ -33,10 +33,10 @@
                 }
             }
         },
-        "push_parameters": {
+        "inbox_services": {
             "$ref": "#/definitions/service-instance-basics"
         },
-        "poll_instances": {
+        "polling_services": {
             "type": "array",
             "items": {
                 "$ref": "#/definitions/service-instance-basics"

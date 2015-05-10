@@ -13,10 +13,10 @@
         }
     },
 
-    "required": ["address", "service_type", "service_version", "protocol_binding", "message_bindings"],
+    "required": ["type", "address", "version", "protocol", "encodings"],
 
     "properties": {
-        "service_type": {
+        "type": {
             "enum" : ["DISCOVERY", "COLLECTION_MANAGEMENT", "INBOX", "POLL"]
         },
         "available": {
@@ -26,13 +26,13 @@
             "type": "string",
             "format": "uri"
         },
-        "service_version": {
+        "version": {
             "type": "string"
         },
-        "protocol_binding": {
+        "protocol": {
             "type": "string"
         },
-        "message_bindings": {
+        "encodings": {
             "type": "array",
             "items": {
                 "type": "string"

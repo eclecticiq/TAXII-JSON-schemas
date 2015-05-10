@@ -14,13 +14,13 @@
         }
     },
 
-    "required": ["message_id"],
+    "required": ["id"],
 
     "properties": {
         "result_id": {
             "type": "string"
         },
-        "destination_collection_name": {
+        "destination_collection_names": {
             "type": "array",
             "items": {
                 "type": "string"
