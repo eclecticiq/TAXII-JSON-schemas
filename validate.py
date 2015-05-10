@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import sys
 import os
 import json
@@ -18,14 +20,15 @@ if __name__ == '__main__':
     schema_path = sys.argv[1]
     blob_path = sys.argv[2]
 
+    print "Validating {} against schema {} -".format(blob_path, schema_path),
+
     schema = read_json(schema_path)
     blob = read_json(blob_path)
 
     schemas_dir = os.path.dirname(os.path.realpath(schema_path))
 
-
     # python-jsonschema needs base_uri (it needs to be with trailing /)
-    # to be able to resolve local files references
+    # to be able to resolve local file references
     resolver = RefResolver(referrer=schema, base_uri='file://' + schemas_dir + '/')
 
     try:

@@ -10,12 +10,9 @@ do
         name="${filename%.*}"
         blob_filename="$BLOBS_DIR/$name.valid.json"
         if [[ -f $blob_filename ]]; then
-            echo -n "Validating $blob_filename against $file: "
             python ./validate.py $file $BLOBS_DIR/$name.valid.json
-            echo
         else
-            echo "No blob found for $file, skipping"
-            echo
+            echo "Skipping $file: no valid blob found"
         fi
     fi
 done
